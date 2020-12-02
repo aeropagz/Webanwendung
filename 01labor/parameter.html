@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta name="author" content="Klaas Pelzer" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Spinning Donut</title>
+    <link rel="shortcut icon" type="image/x-icon" href="resources\favio.ico" />
+    <link rel="stylesheet" href="static\styles\main.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="static\styles\parameter.css" type="text/css" media="screen" charset="utf-8" />
+
+    <script src="static\js\controller.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="erklärung.xhtml">Erklärung</a></li>
+            <li><a href="parameter.html">Parameter</a></li>
+            <li><a href="aufgaben.xhtml">Aufgaben</a></li>
+        </ul>
+    </div>
+    <div class="root">
+        <div class="content">
+
+            <div class="donut">
+                <div class="canvas">
+                    <h1>Donut 1</h1>
+                    <canvas id="canvasdonut1" width="300" height="240"></canvas>
+                    <canvas id="canvasdonut2" width="300" height="240"></canvas>
+                    <h1>Donut 2</h1>
+                </div>
+                <button onclick="anim3();">Toggle Animation</button>
+            </div>
+            <h2>Controller Donut 2</h2>
+            <div class="controller">
+                <div class="checkbox">
+                    <input type="checkbox" id="x-rotation" name="x-rotation" checked/>
+                    <label for="x-rotation">X-Rotation</label>
+                    <input type="checkbox" id="y-rotation" name="y-rotation" checked/>
+                    <label for="y-rotation">Y-Rotation</label>
+                </div>
+                <div class="range">
+                    <input type="range" id="x-rotation-speed" name="x-rotation-speed" min="0" max="1000" value="100" oninput="XInput(this.value)" />
+                    <label for="x-rotation-speed">X-rotation Speed</label>
+                    <input type="range" id="y-rotation-speed" name="y-rotation-speed" min="0" max="1000" value="100" oninput="YInput(this.value)" />
+                    <label for="y-rotation-speed">Y-rotation Speed</label>
+                    <input type="range" id="distance" name="distance" min="0" max="10" oninput="DisInput(this.value)" />
+                    <label for="distance">Distance</label>
+                </div>
+                <div class="radius">
+                    <input type="range" id="R1" name="R1" min="0" max="5" value="1" oninput="R1Input(this.value)" />
+                    <label for="R1">R1</label>
+                    <input type="range" id="R2" name="R2" min="0" max="5" value="2" oninput="R2Input(this.value)" />
+                    <label for="R2">R2</label>
+                </div>
+            </div>
+            <div class="donutdata">
+                <table>
+                    <tr>
+                        <th>Model</th>
+                        <th>X-Rotation-Speed</th>
+                        <th>Y-Rotation-Speed</th>
+                        <th>Distance</th>
+                        <th>Radius </th>
+                    </tr>
+                    <tr>
+                        <td>Donut 1</td>
+                        <td>80.2&#176;/s</td>
+                        <td>34.4&#176;/s </td>
+                        <td>5</td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>R1</th>
+                                    <th>R2</th>
+                                </tr>
+                                <tr>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td id="tableModel2">Donut 2</td>
+                        <td id="tableXRot2">80.2&#176;/s</td>
+                        <td id="tableYRot2">34.4&#176;/s</td>
+                        <td id="tableDis2"></td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <th>R1</th>
+                                    <th>R2</th>
+                                </tr>
+                                <tr>
+                                    <td id="tableR1">1</td>
+                                    <td id="tableR2">2</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>Klaas Pelzer</li>
+            <li>klaas.pelzer@gmx.de</li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

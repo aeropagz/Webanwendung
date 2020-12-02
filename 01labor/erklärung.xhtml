@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta name="author" content="Klaas Pelzer" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Spinning Donut</title>
+    <link rel="stylesheet" href="static\styles\main.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="static\styles\erklaerung.css" type="text/css" media="screen" charset="utf-8" />
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="erklärung.xhtml">Erklärung</a></li>
+            <li><a href="parameter.html">Parameter</a></li>
+            <li><a href="aufgaben.xhtml">Aufgaben</a></li>
+        </ul>
+    </div>
+
+    <div class="root">
+        <div class="content">
+            <div class="erklaerung">
+                <h1>Torus von 3D auf 2D projizieren</h1>
+                <p>Der Donut bildet einen Rotationskörper aus einem Kreis, auch Torus genannt. Er wird durch die zwei Radien <strong>R1</strong> und <strong>R2</strong> bestimmt. Dabei bestimmt R1 den Radius des Kreises und R2 den Abstand von der Rotationsachse
+                    bis zum Mittelpunkt des Kreises.
+                </p>
+                <img src="resources\torusxsec.png" alt="torus" />
+                <p>Um diese Körper in einem 3D-Raum zu zeichen verwendet man folgende Formel:</p>
+                <p><strong>(x,y,z)=(R2,0,0)+(R1cosθ,R1sinθ,0)</strong></p>
+                <p>Nun soll der Kreis um seine Rotationsachse herum gezeichnet werden. Die wird durch das multiplizieren einer Rotationmatrix erreicht. Weiter soll der Torus sich noch drehen und daher dreht er noch um zwei weitere Achsen. Damit sich der
+                    Torus dreht, lassen wir alle um Punkte pro Zeiteinheit um einen bestimmten Winkel pro Achse verschieben.
+                </p>
+                <img src="resources\rotation-matrix.PNG" alt="rotation matrix" />
+                <img src="resources\rotation-matrix2.PNG" alt="rotation matrix" />
+                <p>
+                    Mit dieser Formel erhält man die Punkte des Torus in einem drei dimensionalen Raum. Im ursprünglichen Quellcode werden die Punkte um die folgenden Winkel verschoben gezeichnet. Die Winkel von <strong>R1</strong> und <strong>R2</strong>                    bestimmen den Abstand der Punkte auf dem Torus und die Winkel von <strong>A</strong> und <strong>B</strong> die Bewegung innerhalb von <strong>~50ms</strong>.
+                </p>
+                <table>
+                    <tr>
+                        <th>Kreis R1</th>
+                        <th>Kreis R2</th>
+                        <th>Rotationsachse A</th>
+                        <th>Rotationsachse B</th>
+                    </tr>
+                    <tr>
+                        <td>0.3rad</td>
+                        <td>0.1rad</td>
+                        <td>0.07rad</td>
+                        <td>0.03rad</td>
+                    </tr>
+                    <tr>
+                        <td>17.19&#176;</td>
+                        <td>5,73&#176;</td>
+                        <td>4,01&#176;</td>
+                        <td>1,72&#176;</td>
+                    </tr>
+                </table>
+                <p>
+                    Um die 3D Koordinaten in 2D Koordinaten um zuwandeln verwenden wir diese Formel
+                </p>
+                <img src="resources\2Dzu3D.PNG" alt="2Dzu3D" />
+                <p>
+                    <strong>K1</strong> bestimmt die Entfernung zwischen Betrachter und der Fläche somit das Sichtfeld (FOV). <strong>K2</strong> bestimmt den Abstand von der Fläche bis zum eigentlichen Objekt in dem dreidimensionalen Raum.
+                </p>
+                <br/>
+                <p>
+                    <strong>K1 = z'</strong>
+                </p>
+                <p>
+                    <strong>K2 = z - z'</strong>
+                </p>
+                <img src="resources\skizze.PNG" alt="skizze" />
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>Klaas Pelzer</li>
+            <li>klaas.pelzer@gmx.de</li>
+        </ul>
+    </div>
+</body>
+
+</html>

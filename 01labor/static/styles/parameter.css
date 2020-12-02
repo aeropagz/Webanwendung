@@ -1,0 +1,77 @@
+.donut {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.donut button {
+    width: 10vw;
+    margin: 10px;
+    background-color: rgb(224, 224, 224);
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+
+.canvas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.range {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin: 10px auto;
+}
+
+.radius {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+
+.radius label {
+    margin-bottom: 10px;
+}
+
+.range label {
+    margin-bottom: 10px;
+}
+
+.controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox input {
+    width: 50%;
+    margin: 10px;
+}
+
+.donutdata table td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.donutdata td {
+    text-align: center;
+    width: 20%;
+}
+
+.donutdata th {
+    padding: 5px;
+}
+
+.donutdata table {
+    border-collapse: collapse;
+    width: 100%;
+    padding: 5px;
+}

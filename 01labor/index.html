@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <meta name="author" content="Klaas Pelzer" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Spinning Donut</title>
+    <link rel="shortcut icon" type="image/x-icon" href="resources\favio.ico" />
+    <link rel="stylesheet" href="static\styles\main.css" type="text/css" media="screen" charset="utf-8" />
+    <link rel="stylesheet" href="static\styles\index.css" type="text/css" media="screen" charset="utf-8" />
+    <script src="static\js\donut.js" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="nav">
+        <ul class="nav-links">
+            <li><a href="index.html">Start</a></li>
+            <li><a href="erklärung.xhtml">Erklärung</a></li>
+            <li><a href="parameter.html">Parameter</a></li>
+            <li><a href="aufgaben.xhtml">Aufgaben</a></li>
+        </ul>
+    </div>
+    <div class="root">
+        <div class="content">
+            <div class="donut">
+                <h1>3D Animated Donut</h1>
+                <h2>In ASCII Art</h2>
+                <button onclick="anim1();">Toggle Animation</button>
+                <pre id="d"></pre>
+                <!-- Das ist der Kommentar -->
+                <h2>In Canvas</h2>
+                <button onclick="anim2();">Toggle Animation</button>
+                <canvas id="canvasdonut" width="300" height="240"></canvas>
+                <p>Source Code von:</p>
+                <a href="https://www.a1k0n.net/2011/07/20/donut-math.html">a1k0n.net</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>Klaas Pelzer</li>
+            <li>klaas.pelzer@gmx.de</li>
+        </ul>
+    </div>
+</body>
+
+</html>

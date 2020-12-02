@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body,
+html {
+    height: 100%;
+    background-color: rgb(224, 224, 224);
+}
+
+
+/*
+nav styling
+*/
+
+.nav {
+    width: 100%;
+    margin: 0 auto;
+    background: #f88282;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin: 0 80px;
+}
+
+.nav ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #000;
+    text-transform: uppercase;
+    margin: 0 5px;
+    user-select: none;
+}
+
+.nav ul li a,
+.nav ul li a:after,
+.nav ul li a:before {
+    transition: all .5s;
+}
+
+.nav ul li a:hover {
+    color: rgb(121, 0, 0);
+}
+
+.nav ul li a {
+    position: relative;
+}
+
+.nav ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #000;
+    height: 1px;
+}
+
+.nav ul li a:hover:after {
+    width: 100%;
+}
+
+
+/*  Container styling */
+
+.root {
+    width: 100%;
+    min-height: 100%;
+    max-width: 1440px;
+    margin: 0px auto;
+    padding: 20px;
+}
+
+.content {
+    background-color: white;
+    border-radius: 6px;
+    padding: 20px;
+}
+
+
+/*
+footer styling
+*/
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    background-color: rgb(248, 130, 130);
+    position: relative;
+    bottom: 0px;
+    width: 100%;
+    left: 0px;
+    height: 6vh;
+    color: black;
+    align-items: center;
+}
+
+.footer li {
+    list-style: none;
+}
+
+@media print {
+    canvas {
+        display: none;
+    }
+    .nav {
+        display: none;
+    }
+    .footer {
+        display: none;
+    }
+}
